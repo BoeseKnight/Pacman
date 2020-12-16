@@ -4,7 +4,8 @@
 #include "Labyrinth.h"
 #include "Game.h"
 #include"Pacman.h"
-class HandleEvents: public Pacman {
+#include"Ghosts.h"
+class HandleEvents: public Ghosts {
 public:
 	void events();
 };

@@ -5,8 +5,8 @@ using namespace sf;
 
 int main()
 {
-	HandleEvents win;
-	win.events();
+	HandleEvents game;
+	game.events();
 	
 }
 

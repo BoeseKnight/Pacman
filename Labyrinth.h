@@ -9,7 +9,7 @@ class Labyrinth: public game {
 protected:
 	int num_dots;
 	CircleShape dots;
-	RectangleShape block, blockY, block1;
+	RectangleShape block, door;
 	std::string field[34]={ 
 	"1111111111111111111111111111",
 	"1222222222222222222222222221",
@@ -47,15 +47,13 @@ protected:
 	"1111111111111111111111111111", };
 public:
 	Labyrinth() {
-		block.setSize(Vector2f(24.f, 24.f/*12.f*/));
+		block.setSize(Vector2f(24.f, 24.f));
 		block.setFillColor(Color::Blue);
 		dots.setRadius(3.0);
-		dots.setFillColor(Color::Yellow);
+		dots.setFillColor(Color::Red);
 		num_dots = 0;
-		/*blockY.setSize(Vector2f(12.f, 24.f));
-		blockY.setFillColor(Color::Blue);
-		block1.setSize(Vector2f(12.f, 12.f));
-		block1.setFillColor(Color::Blue);*/
+		door.setSize(Vector2f(24.f, 10.f));
+		door.setFillColor(Color(0,255,0));
 	}
 	void building_field();
 	void generate_dots();

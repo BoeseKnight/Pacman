@@ -10,7 +10,7 @@ protected:
 public:
 	game() {
 		window.create(VideoMode(672, 864), "Pacman");
+		window.setVerticalSyncEnabled(true);
+		window.setFramerateLimit(60);
 	}
-	/*void WindowDraw();*/
-	/*void events();*/
 };
