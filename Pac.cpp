@@ -31,18 +31,18 @@ void Pacman::moving(int direction, float time) {
 	}
 	if (direction == 1) {
 	/*	collisionX();*/
-		pacman.move(-24*time/20, 0);
+		pacman.move(-24*(time/20), 0);
 	}
 	if (direction == 2) {
 		/*collisionX();*/
-		pacman.move(24 * time / 20, 0);
+		pacman.move(24 * (time / 20), 0);
 		
 	}
 	if (direction == 3) {
-		pacman.move(0,-24 * time / 20 );
+		pacman.move(0,-24 * (time / 20) );
 	}
 	if (direction == 4) {
-		pacman.move(0, 24 * time / 20);
+		pacman.move(0, 24 * (time / 20));
 	}
 }
 void Pacman :: collision(int &direction_last, int &direction ) {
@@ -139,7 +139,7 @@ void Pacman::eating_dots() {
 void Pacman::animation(int& dir, float time, bool game) {
 	static float frame, death_frame;
 	static bool death=1;
-	frame += time*0.15;
+	frame += time*0.2;
 	if (game == 0) {
 		death_frame += time * 0.1;
 	}
@@ -185,8 +185,8 @@ void Pacman:: texter(bool& game, int& direction){
 	text1.setFont(font);
 	text1.setCharacterSize(40);
 	text1.setString("GAME OVER! CONGRATS!");
-	text1.setOutlineColor(Color::Red);
-	text1.setFillColor(Color::Red);
+	text1.setOutlineColor(Color::White);
+	text1.setFillColor(Color::White);
 	text1.setPosition(Vector2f(100.0, 300.0));
 	text2.setFont(font);
 	text2.setCharacterSize(40);

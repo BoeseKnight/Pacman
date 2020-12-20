@@ -5,6 +5,7 @@
 #include "Game.h"
 #include"Pacman.h"
 #include"Ghosts.h"
+#include"Menu.h"
 class HandleEvents: public Ghosts {
 public:
 	void events();

@@ -623,11 +623,27 @@ void Ghosts::interaction(int& direction) {
 	Vector2f pos3 = pinky.getPosition();
 	Vector2f pos4 = clyde.getPosition();
 	Vector2f pos_pac = pacman.getPosition();
-	if ((int)((pos_pac.x+10) / 24) == (int)((pos1.x+10) / 24) && (int)((pos_pac.y+10) / 24 )== (int)((pos1.y+10) / 24)) {
+	if (pacman.getGlobalBounds().intersects(blinky.getGlobalBounds())) {
 		direction = 0;
 		condition = 0;
 	}
-	if ((int)((pos_pac.x+10) / 24) == (int)((pos2.x + 10) / 24) && (int)((pos_pac.y + 10) / 24) == (int)((pos2.y + 10) / 24)) {
+	if (pacman.getGlobalBounds().intersects(clyde.getGlobalBounds())) {
+		direction = 0;
+		condition = 0;
+	}
+	if (pacman.getGlobalBounds().intersects(inky.getGlobalBounds())) {
+		direction = 0;
+		condition = 0;
+	}
+	if (pacman.getGlobalBounds().intersects(pinky.getGlobalBounds())) {
+		direction = 0;
+		condition = 0;
+	}
+	/*if ((int)((pos_pac.x+10) / 24) == (int)((pos1.x+10) / 24) && (int)((pos_pac.y+10) / 24 )== (int)((pos1.y+10) / 24)) {
+		direction = 0;
+		condition = 0;
+	}*/
+	/*if ((int)((pos_pac.x+10) / 24) == (int)((pos2.x + 10) / 24) && (int)((pos_pac.y + 10) / 24) == (int)((pos2.y + 10) / 24)) {
 		direction = 0;
 		condition = 0;
 	}
@@ -638,7 +654,7 @@ void Ghosts::interaction(int& direction) {
 	if ((int)((pos_pac.x+10) / 24) == (int)((pos4.x + 10) / 24) && (int)((pos_pac.y + 10) / 24) == (int)((pos4.y +10) / 24)) {
 		direction = 0;
 		condition = 0;
-	}
+	}*/
 	/*cout << lives;*/
 }
 

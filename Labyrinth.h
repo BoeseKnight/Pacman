@@ -3,6 +3,7 @@
 #include <SFML/Graphics.hpp>
 #include <string.h>
 #include "Game.h"
+#include "Menu.h"
 using namespace sf;
 
 class Labyrinth: public game {

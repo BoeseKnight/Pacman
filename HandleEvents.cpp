@@ -6,15 +6,20 @@
 #include "Labyrinth.h"
 #include <iostream>
 using namespace std;
-void HandleEvents::events() {
+void HandleEvents::events() {	
+	menu();
 	Clock clock;
 	bool game = 1;
 	int dir = 0, dir_last = 0;
 	clock.getElapsedTime().asSeconds();
 	float time;
-	time = clock.getElapsedTime().asMicroseconds();
-	clock.restart();
+	
+	//time +=1;
+
 	while (window.isOpen()) {
+		time = clock.getElapsedTime().asMicroseconds();
+		clock.restart();
+		time /= 15000;
 		Event event;
 		while (window.pollEvent(event)) {
 			if (event.type == Event::Closed) {
@@ -41,7 +46,7 @@ void HandleEvents::events() {
 		if (game) {
 			collision(dir_last, dir);
 			dir_last = dir;
-			cout << time;
+		
 			moving(dir, time);
 			interaction(dir);
 			pinky_moving(time);
@@ -57,16 +62,8 @@ void HandleEvents::events() {
 		drawing_pacman();
 		building_field();
 		texter(game, dir);
-		/*if (Mouse::isButtonPressed(Mouse::Left)) {
-			Vector2i position=Mouse::getPosition(window);
-			cout << (int)(position.x/24) << " " << (int)(position.y / 24);
-
-
-		}
-		if (IntRect(0, 0, 100, 100).contains(Mouse::getPosition(window))) {
-			cout << "Popal";
-		}*/
 		window.display();
+		cout << time<<endl;
 	}
 	
 	

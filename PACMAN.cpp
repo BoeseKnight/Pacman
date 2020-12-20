@@ -1,13 +1,15 @@
 ﻿#include <iostream>
 #include "HandleEvents.h"
+#include "Menu.h"
 #include <SFML/Graphics.hpp>
 using namespace sf;
 
 int main()
 {
 	HandleEvents game;
+	/*Menu menu;
+	menu.menu();*/
 	game.events();
-	
 }
 
 // Запуск программы: CTRL+F5 или меню "Отладка" > "Запуск без отладки"
