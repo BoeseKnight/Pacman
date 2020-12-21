@@ -24,6 +24,11 @@ void game::menu() {
 				window.draw(right);
 				window.draw(left);
 				window.draw(up);
+				window.draw(down);
+				window.draw(text_down);
+				window.draw(text_right);
+				window.draw(text_left);
+				window.draw(text_up);
 				window.display();
 				while (!Keyboard::isKeyPressed(Keyboard::Escape)) {
 					while (window.pollEvent(event)) {

@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="game">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAA=</HashCode>
+      <FileName>Game.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Ghosts">
+    <Position X="9" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAACQBAgAAAIgAAAAAAIAAAIAAABAAAAAEAAQwFAA=</HashCode>
+      <FileName>Ghosts.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HandleEvents">
+    <Position X="12.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAA=</HashCode>
+      <FileName>HandleEvents.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Labyrinth">
+    <Position X="3" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAAAAAAAwAAAAAAEAAAgAAAAAAAAAAAAAABAABAA=</HashCode>
+      <FileName>Labyrinth.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Pacman">
+    <Position X="6" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAggICAAAAAIAAAAAAAAIAAAkIAAhIAAAAIAAAAAAA=</HashCode>
+      <FileName>Pacman.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="10" />
+</ClassDiagram>

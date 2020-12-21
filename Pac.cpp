@@ -10,7 +10,7 @@ void Pacman::drawing_pacman() {
 	Vector2f pos = pacman.getPosition();
 	Font font;
 	Text text1;
-	font.loadFromFile("D:/Programming Projects/Graphics/crackman.regular.ttf");
+	font.loadFromFile("crackman.regular.ttf");
 	text1.setFont(font);
 	ostringstream out;
 	out << lives;
@@ -24,7 +24,7 @@ void Pacman::drawing_pacman() {
 void Pacman::moving(int direction, float time) {
 	if (condition == 0) {
 		lives--;
-		texture.loadFromFile("D:/Programming Projects/Graphics/things.png", IntRect(0, 0, 15, 15));
+		texture.loadFromFile("things.png", IntRect(0, 0, 15, 15));
 		pacman.setTexture(texture);
 		pacman.setPosition(Vector2f(24.f, 96.f));
 		condition = 1;
@@ -65,7 +65,7 @@ void Pacman :: collision(int &direction_last, int &direction ) {
 		
 	}
 	if (direction == 4 && down == 1) {
-	/*	cout << "Warning! Wall underneath!!!\n";*/
+		cout << "Warning! Wall underneath!!!\n";
 		if (direction_last != 3 && direction_last != 4) {
 			direction = direction_last;
 		}
@@ -74,7 +74,7 @@ void Pacman :: collision(int &direction_last, int &direction ) {
 		}
 	}
 	if (direction == 1 && left == 1) {
-		/*cout << "Warning! Wall to the left!!!\n";*/
+		cout << "Warning! Wall to the left!!!\n";
 		if (direction_last != 1 && direction_last != 2) {
 			direction = direction_last;
 		}
@@ -83,7 +83,7 @@ void Pacman :: collision(int &direction_last, int &direction ) {
 		}
 	}
 	if (direction == 2 && right == 1) {
-		/*cout << "Warning! Wall on the right!!!\n";*/
+		cout << "Warning! Wall on the right!!!\n";
 		if (direction_last != 1 && direction_last != 2) {
 			direction = direction_last;
 		}
@@ -92,7 +92,7 @@ void Pacman :: collision(int &direction_last, int &direction ) {
 		}
 	}
 	if (direction == 3 && up == 1) {
-		//cout << "Warning! Wall on top!!!\n";
+		cout << "Warning! Wall on top!!!\n";
 		if (direction_last != 4 && direction_last != 3) {
 			direction = direction_last;
 		}
@@ -106,7 +106,7 @@ void Pacman::eating_dots() {
 	Vector2f pos = pacman.getPosition();
 	Font font;
 	Text text1;
-	font.loadFromFile("D:/Programming Projects/Graphics/crackman.regular.ttf");
+	font.loadFromFile("crackman.regular.ttf");
 	text1.setFont(font);
 	ostringstream out;
 	out << points;
@@ -151,27 +151,27 @@ void Pacman::animation(int& dir, float time, bool game) {
 		frame = 0;
 	}
 	if (game==0 && death!=0) {
-		texture.loadFromFile("D:/Programming Projects/Graphics/things.png", IntRect(15 * (int)death_frame, 75, 15, 15));
+		texture.loadFromFile("things.png", IntRect(15 * (int)death_frame, 75, 15, 15));
 		pacman.setTexture(texture);
 		pacman.setScale(sf::Vector2f((20.0 / 15.0), (20.0 / 15.0)));
 	}
 	if (dir == 3) {
-		texture.loadFromFile("D:/Programming Projects/Graphics/things.png", IntRect(15 * (int)frame, 0, 15, 15));
+		texture.loadFromFile("things.png", IntRect(15 * (int)frame, 0, 15, 15));
 		pacman.setTexture(texture);
 		pacman.setScale(sf::Vector2f((20.0 / 15.0), (20.0 / 15.0)));
 	}
 	if (dir == 1) {
-		texture.loadFromFile("D:/Programming Projects/Graphics/things.png", IntRect(90+(15 * (int)frame), 0, 15, 15));
+		texture.loadFromFile("things.png", IntRect(90+(15 * (int)frame), 0, 15, 15));
 		pacman.setTexture(texture);
 		pacman.setScale(sf::Vector2f((20.0 / 15.0), (20.0 / 15.0)));
 	}
 	if (dir == 2) {
-		texture.loadFromFile("D:/Programming Projects/Graphics/things.png", IntRect(135 + (15 * (int)frame), 0, 15, 15));
+		texture.loadFromFile("things.png", IntRect(135 + (15 * (int)frame), 0, 15, 15));
 		pacman.setTexture(texture);
 		pacman.setScale(sf::Vector2f((20.0 / 15.0), (20.0 / 15.0)));
 	}
 	if (dir == 4) {
-		texture.loadFromFile("D:/Programming Projects/Graphics/things.png", IntRect(45 + (15 * (int)frame), 0, 15, 15));
+		texture.loadFromFile("things.png", IntRect(45 + (15 * (int)frame), 0, 15, 15));
 		pacman.setTexture(texture);
 		pacman.setScale(sf::Vector2f((20.0 / 15.0), (20.0 / 15.0)));
 	}
@@ -181,13 +181,13 @@ void Pacman::animation(int& dir, float time, bool game) {
 void Pacman:: texter(bool& game, int& direction){
 	Font font;
 	Text text1, text2;
-	font.loadFromFile("D:/Programming Projects/Graphics/crackman.regular.ttf");
+	font.loadFromFile("crackman.regular.ttf");
 	text1.setFont(font);
 	text1.setCharacterSize(40);
-	text1.setString("GAME OVER! CONGRATS!");
+	text1.setString("GAME OVER! YOU WIN!");
 	text1.setOutlineColor(Color::White);
 	text1.setFillColor(Color::White);
-	text1.setPosition(Vector2f(100.0, 300.0));
+	text1.setPosition(Vector2f(120.0, 300.0));
 	text2.setFont(font);
 	text2.setCharacterSize(40);
 	text2.setString("GAME OVER! YOU LOOSE");

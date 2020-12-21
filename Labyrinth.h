@@ -56,6 +56,7 @@ public:
 		door.setSize(Vector2f(24.f, 10.f));
 		door.setFillColor(Color(0,255,0));
 	}
+	~Labyrinth(){}
 	void building_field();
 	void generate_dots();
 	int get_num_dots();

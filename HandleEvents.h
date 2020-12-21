@@ -8,5 +8,7 @@
 #include"Menu.h"
 class HandleEvents: public Ghosts {
 public:
+	HandleEvents(){}
+	~HandleEvents(){}
 	void events();
 };

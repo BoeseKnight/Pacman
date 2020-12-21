@@ -16,7 +16,7 @@ protected:
 	Texture texture;
 public:
 	Pacman() {
-		texture.loadFromFile("D:/Programming Projects/Graphics/things.png", IntRect(0, 0, 15, 15));
+		texture.loadFromFile("things.png", IntRect(0, 0, 15, 15));
 		pacman.setTexture(texture);
 		pacman.setScale(sf::Vector2f((20.0/15.0), (20.0/15.0)));
 		pacman.setPosition(Vector2f(24.f, 96.f));
@@ -26,7 +26,7 @@ public:
 		condition = 1;
 		points = 0;
 	}
-	~Pacman() {};
+	~Pacman() {}
 	void drawing_pacman();
 	void moving(int, float);
 	void collision(int&, int&);

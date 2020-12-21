@@ -1,5 +1,6 @@
 #include <iostream>
 #include <SFML/Graphics.hpp>
+#include <SFML/Audio.hpp>
 #include <string.h>
 #include"HandleEvents.h"
 #include "Game.h"
@@ -7,7 +8,13 @@
 #include <iostream>
 using namespace std;
 void HandleEvents::events() {	
+	Music music;
+	music.setVolume(50);
+	music.setLoop(true);
 	menu();
+	if (!music.openFromFile("Pacman.wav")) {
+		cout << "Error";
+	};
 	Clock clock;
 	bool game = 1;
 	int dir = 0, dir_last = 0;
@@ -15,7 +22,7 @@ void HandleEvents::events() {
 	float time;
 	
 	//time +=1;
-
+	music.play();
 	while (window.isOpen()) {
 		time = clock.getElapsedTime().asMicroseconds();
 		clock.restart();
@@ -63,7 +70,7 @@ void HandleEvents::events() {
 		building_field();
 		texter(game, dir);
 		window.display();
-		cout << time<<endl;
+		/*cout << time<<endl;*/
 	}
 	
 	
